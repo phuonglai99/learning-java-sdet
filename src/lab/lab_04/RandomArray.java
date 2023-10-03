@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class RandomArray {
         public static int LENGTH_ARRAY = 10;
         public static int MAX_VALUE = 1000;
-        public static boolean isRun = true;
+        //public static boolean isRun = true;
         public static void printGameMenu(){
             System.out.println("===MENU===");
             System.out.println("1. Print all numbers");
@@ -22,7 +22,8 @@ public class RandomArray {
             int option = scanner.nextInt();
             return option;
         }
-        public static void playUserOption(List<Integer> array,int options){
+        public static boolean playUserOption(List<Integer> array,int options){
+            boolean isRun = true;
             switch (options){
                 case 1:
                     printArray(array);
@@ -42,6 +43,7 @@ public class RandomArray {
                     System.out.println("=====END=====");
                     break;
             }
+            return isRun;
         }
 
         public static List<Integer> generateRandomArray(){
@@ -89,9 +91,10 @@ public class RandomArray {
     public static void main(String[] args) {
         printGameMenu();
         List<Integer> array = generateRandomArray();
+        boolean isRun = true;
         while(isRun){
             int option = getUserInput("Input your option:");
-            playUserOption(array,option);
+            isRun = playUserOption(array,option);
         }
     }
 }
