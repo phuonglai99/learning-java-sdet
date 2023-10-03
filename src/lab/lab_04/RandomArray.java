@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class RandomArray {
         public static int LENGTH_ARRAY = 10;
         public static int MAX_VALUE = 1000;
+        public static boolean isRun = true;
         public static void printGameMenu(){
             System.out.println("===MENU===");
             System.out.println("1. Print all numbers");
@@ -36,9 +37,14 @@ public class RandomArray {
                     int numb = getUserInput("Input your number want to search");
                     System.out.println(getListIndexOfNumber(array,numb));
                     break;
-//                default:
-//                    System.out.println("Invalid Option");
+                default:
+                    isRun = false;
+                    System.out.println("=====END=====");
+                    break;
             }
+        }
+        public static void changeValue(int a){
+            a=5;
         }
         public static List<Integer> generateRandomArray(){
             List<Integer> array = new ArrayList<>();
@@ -85,12 +91,9 @@ public class RandomArray {
     public static void main(String[] args) {
         printGameMenu();
         List<Integer> array = generateRandomArray();
-        int option = 0;
-        do{
-            option = getUserInput("Input your option:");
+        while(isRun){
+            int option = getUserInput("Input your option:");
             playUserOption(array,option);
-            System.out.println("============");
-        }while(option==1||option==2||option==3||option==4);
-        System.out.println("====END====");
+        }
     }
 }
