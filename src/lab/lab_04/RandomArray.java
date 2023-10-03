@@ -43,9 +43,7 @@ public class RandomArray {
                     break;
             }
         }
-        public static void changeValue(int a){
-            a=5;
-        }
+
         public static List<Integer> generateRandomArray(){
             List<Integer> array = new ArrayList<>();
             for(int i=0;i<LENGTH_ARRAY;i++){
