@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class AnimalTest {
     public static void main(String[] args) {
-        Dog dog = new Dog("dog");
-        Horse hourse = new Horse("horse");
-        Tiger tiger = new Tiger("tiger");
+        Dog dog = new Dog("dog3");
+        Horse hourse = new Horse("horse1");
+        Tiger tiger = new Tiger("tiger2");
         //System.out.println(dog.randomSpeed(9000));
         //System.out.println(dog.name);
         AnimalController controller = new AnimalController();

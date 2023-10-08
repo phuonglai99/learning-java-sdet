@@ -3,10 +3,24 @@ package lab.lab_07_02;
 import java.security.SecureRandom;
 
 public class Animal {
-    public int speed;
-    public String name;
+    private int speed;
+    private String name;
 
+    public int getSpeed() {
+        return speed;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
     public int randomSpeed(int maxSpeed){
        return new SecureRandom().nextInt(maxSpeed);
+    }
+
+    Animal(String name, int maxSpeed){
+        this.speed = randomSpeed(maxSpeed);
+        this.name = name;
     }
 }
