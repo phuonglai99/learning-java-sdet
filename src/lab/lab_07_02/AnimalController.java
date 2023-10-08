@@ -5,7 +5,7 @@ import java.util.List;
 public class AnimalController {
     public void getWinner(List<Animal> list){
         int maxSpeed = list.get(0).speed;
-        String winnerName = "";
+        String winnerName = list.get(0).name;
         for(Animal item:list){
             int currentSpeed = item.speed;
             if(maxSpeed<currentSpeed){
