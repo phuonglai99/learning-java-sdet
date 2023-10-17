@@ -6,21 +6,26 @@ public class Animal {
     private int speed;
     private String name;
 
-    public int getSpeed() {
-        return speed;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public int randomSpeed(int maxSpeed){
-       return new SecureRandom().nextInt(maxSpeed);
-    }
-
-    Animal(String name, int maxSpeed){
+    Animal(String name, int maxSpeed) {
         this.speed = randomSpeed(maxSpeed);
         this.name = name;
     }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int randomSpeed(int maxSpeed) {
+        return new SecureRandom().nextInt(maxSpeed);
+    }
+
+
 }

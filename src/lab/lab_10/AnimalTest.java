@@ -1,4 +1,4 @@
-package lab.lab_07_02;
+package lab.lab_10;
 
 import java.util.Arrays;
 
@@ -7,8 +7,6 @@ public class AnimalTest {
         Dog dog = new Dog("dog3");
         Horse horse = new Horse("horse1");
         Tiger tiger = new Tiger("tiger2");
-        //System.out.println(dog.randomSpeed(9000));
-        //System.out.println(dog.name);
         AnimalController controller = new AnimalController();
         controller.getWinner(Arrays.asList(dog,horse,tiger));
     }
