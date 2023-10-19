@@ -17,6 +17,6 @@ public class AnimalTest {
 
         List animals = new ArrayList(Arrays.asList(horse,tiger,dog,Falcon,Eagle));
         AnimalBuilder winner = new AnimalController().getWinner(animals);
-        System.out.printf("Winner is %s with speed %d and withSwings is %s",winner.getName(),winner.getSpeed(),winner.isWithSwings());
+        System.out.printf("Winner is %s with speed %d",winner.getName(),winner.getSpeed());
     }
 }

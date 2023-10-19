@@ -3,22 +3,19 @@ package lab.lab_10;
 import java.security.SecureRandom;
 
 public abstract class Animal {
-    private int speed;
-    private String name;
+    protected int speed;
+    protected String name;
 
-    Animal(String name) {
-        this.speed = randomSpeed();
+    public void setName(String name) {
         this.name = name;
-    }
-
-    public int getSpeed() {
-        return speed;
     }
 
     public String getName() {
         return name;
     }
-    public abstract int randomSpeed();
 
+    public abstract int getSpeed();
+
+    public abstract int randomSpeed();
 
 }

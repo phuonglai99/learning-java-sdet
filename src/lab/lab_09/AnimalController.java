@@ -4,12 +4,16 @@ import java.util.List;
 
 public class AnimalController {
     public AnimalBuilder getWinner(List<AnimalBuilder> list){
-        AnimalBuilder winner = list.get(0);
+        AnimalBuilder winner = null;
+        int maxSpeed = -1;
         for(AnimalBuilder item:list){
-            int currentSpeed = item.getSpeed();
-            if(winner.getSpeed()<currentSpeed){
-                winner = item;
-            }
+                if(!item.isWithSwings()) {
+                    int currentSpeed = item.getSpeed();
+                    if (maxSpeed < currentSpeed) {
+                        maxSpeed =currentSpeed;
+                        winner = item;
+                    }
+                }
         }
         return winner;
     }
