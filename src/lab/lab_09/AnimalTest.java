@@ -12,8 +12,8 @@ public class AnimalTest {
         AnimalBuilder horse = builder.setRandomWithMaxSpeed(75).setWithSwings(false).setName("hourse").build();
         AnimalBuilder tiger = builder.setRandomWithMaxSpeed(60).setWithSwings(false).setName("tiger").build();
         AnimalBuilder dog = builder.setRandomWithMaxSpeed(10).setWithSwings(false).setName("dog").build();
-        AnimalBuilder Falcon = builder.setRandomWithMaxSpeed(100).setWithSwings(true).setName("Falcon").build();
-        AnimalBuilder Eagle = builder.setRandomWithMaxSpeed(200).setWithSwings(true).setName("Eagle").build();
+        AnimalBuilder Falcon = builder.setRandomWithMaxSpeed(10000).setWithSwings(true).setName("Falcon").build();
+        AnimalBuilder Eagle = builder.setRandomWithMaxSpeed(200000).setWithSwings(true).setName("Eagle").build();
 
         List animals = new ArrayList(Arrays.asList(horse,tiger,dog,Falcon,Eagle));
         AnimalBuilder winner = new AnimalController().getWinner(animals);
